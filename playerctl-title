@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+
+status=$(playerctl status)
+
+if [ "$status" = "Stopped" ]; then
+    echo ""
+else
+    echo "$(playerctl metadata title)"
+fi
